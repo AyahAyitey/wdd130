@@ -13,18 +13,29 @@ body {
 /* ── Header / Nav ── */
 header {
     background-color: #1a3a5c;
+}
+
+nav {
+    background-color: #1a3a5c;
     padding: 1rem 2rem;
 }
 
-header nav a {
+nav a {
     color: #fff;
     text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
     margin-right: 1.5rem;
     font-size: 1rem;
 }
 
-header nav a:hover {
+nav a:hover {
     text-decoration: underline;
+}
+
+/* ── Headings ── */
+h1 {
+    color: #1a3a5c;
 }
 
 /* ── Main ── */
@@ -40,6 +51,9 @@ main img {
     display: block;
     margin-bottom: 1rem;
     border-radius: 50%;
+    border: 3px solid #1a3a5c;
+    padding: 4px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* ── Aside ── */
