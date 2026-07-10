@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" width="300" height="80">
+  <rect width="300" height="80" rx="10" fill="#1a3a5c"/>
+  <!-- Stylized wave -->
+  <path d="M10,50 Q40,30 70,50 Q100,70 130,50 Q160,30 190,50 Q220,70 250,50 Q270,38 290,42"
+        fill="none" stroke="#5bc8e8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M10,58 Q40,38 70,58 Q100,78 130,58 Q160,38 190,58 Q220,78 250,58 Q270,46 290,50"
+        fill="none" stroke="#a8dff0" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+  <!-- WWR text -->
+  <text x="15" y="38" font-family="Georgia, serif" font-size="28" font-weight="bold" fill="#ffffff" letter-spacing="2">WWR</text>
+  <text x="72" y="38" font-family="Georgia, serif" font-size="13" fill="#5bc8e8" letter-spacing="1">White Water Rafting</text>
+</svg>
