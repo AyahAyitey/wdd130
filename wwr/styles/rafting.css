@@ -111,50 +111,55 @@ header nav a:hover {
     overflow: hidden;
 }
 
-.hero > img {
+.hero img:first-child {
     display: block;
     width: 100%;
     height: auto;
 }
 
-.hero-overlay {
+.hero h1 {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 20px;
     width: 100%;
-    height: 45%;
-    /* covers the upper portion of the image */
-    background: var(--dark-overlay);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 20px;
-}
-
-.hero-overlay h1 {
-    font-family: 'Georgia', cursive, serif;
+    padding: 16px;
+    text-align: center;
+    font-family: 'Georgia', serif;
     font-size: 2.4rem;
     color: #f5e6a3;
-    /* warm gold, like in the reference */
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    background-color: var(--accent1-color);
+    opacity: 0.85;
     letter-spacing: 2px;
-    position: static;
-    /* reset absolute from base h1 rule */
-    background: none;
-    opacity: 1;
-    padding: 0;
-    text-align: center;
-    width: auto;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
 }
 
-.hero-overlay p {
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 55%;
+    background-color: rgba(26, 58, 92, 0.82);
     color: #ffffff;
-    font-size: 0.95rem;
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin: 0;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    height: auto;
+    margin: 0 0 8px 12px;
+    border: 3px solid var(--accent2-color);
+    border-radius: 4px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.hero article p {
+    color: #e8f4fb;
+    font-size: 0.9rem;
+    line-height: 1.5;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 /* ── Book Now / Join Us buttons ── */
@@ -348,20 +353,19 @@ footer {
     padding: 0;
 }
 
-.footer-left nav {
+.footer-links {
     display: flex;
     gap: 16px;
-    margin: 0;
-    padding: 0;
+    margin: 4px 0 0 !important;
 }
 
-.footer-left nav a {
+.footer-links a {
     color: #cccccc;
     text-decoration: none;
     font-size: 0.85rem;
 }
 
-.footer-left nav a:hover {
+.footer-links a:hover {
     color: var(--accent2-color);
 }
 
