@@ -137,7 +137,7 @@ header nav a:hover {
     bottom: 20px;
     left: 20px;
     width: 55%;
-    background-color: rgba(26, 58, 92, 0.82);
+    background-color: var(--dark-overlay);
     color: #ffffff;
     border-radius: 6px;
     padding: 14px 16px;
@@ -152,6 +152,15 @@ header nav a:hover {
     border: 3px solid var(--accent2-color);
     border-radius: 4px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.hero article h2 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
 }
 
 .hero article p {
@@ -271,12 +280,14 @@ header nav a:hover {
     margin-top: 4px;
 }
 
-.card h3 {
+.card-label {
     font-family: var(--heading-font);
     font-size: 1rem;
     color: #3a3a3a;
     text-align: center;
     letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
 }
 
 /* ======================
@@ -351,22 +362,6 @@ footer {
     font-size: 0.78rem;
     margin: 0;
     padding: 0;
-}
-
-.footer-links {
-    display: flex;
-    gap: 16px;
-    margin: 4px 0 0 !important;
-}
-
-.footer-links a {
-    color: #cccccc;
-    text-decoration: none;
-    font-size: 0.85rem;
-}
-
-.footer-links a:hover {
-    color: var(--accent2-color);
 }
 
 /* ── Social icons ── */
