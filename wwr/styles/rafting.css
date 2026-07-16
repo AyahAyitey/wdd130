@@ -16,7 +16,6 @@
     --card-border: #b8a98a;
     /* muted tan for borders   */
     --dark-overlay: rgba(0, 0, 0, 0.45);
-    /* hero text scrim         */
     --body-font: Georgia, 'Times New Roman', serif;
     --heading-font: 'Trebuchet MS', Verdana, sans-serif;
 }
@@ -32,15 +31,7 @@
 body {
     font-family: var(--body-font);
     color: #333;
-    background-color: #ffffff;
-}
-
-/* ── Page-width container ── */
-header,
-main,
-footer {
-    width: 840px;
-    margin: 0 auto;
+    background-color: #f4f1ec;
 }
 
 /* ── Headings ── */
@@ -51,37 +42,28 @@ h3 {
     color: var(--primary-color);
 }
 
-/* ── Base spacing for nav / p / section / article ── */
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
-}
-
 /* ======================
-   HEADER
+   HEADER  –  CSS Grid
    ====================== */
 header {
     background-color: var(--primary-color);
-    display: flex;
+    display: grid;
+    grid-template-columns: 200px 1fr;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
+    padding: 10px 30px;
     width: 100%;
-    /* stretch full viewport width */
-    max-width: 100%;
 }
 
 header img {
     display: block;
-    width: 220px;
+    width: 180px;
     height: auto;
 }
 
+/* NAV  –  CSS Flex */
 header nav {
     display: flex;
+    justify-content: flex-end;
     gap: 4px;
     margin: 0;
     padding: 0;
@@ -97,7 +79,8 @@ header nav a {
     transition: background-color 0.2s;
 }
 
-header nav a:hover {
+header nav a:hover,
+header nav a[href="about.html"] {
     background-color: var(--accent2-color);
     color: var(--primary-color);
 }
@@ -111,50 +94,50 @@ header nav a:hover {
     overflow: hidden;
 }
 
-.hero img:first-child {
+.hero > img:first-child {
     display: block;
     width: 100%;
-    height: auto;
+    height: 420px;
+    object-fit: cover;
 }
 
 .hero h1 {
     position: absolute;
-    top: 20px;
+    top: 0;
     width: 100%;
-    padding: 16px;
+    padding: 18px;
     text-align: center;
-    font-family: 'Georgia', serif;
+    font-family: var(--heading-font);
     font-size: 2.4rem;
     color: #f5e6a3;
-    background-color: var(--accent1-color);
-    opacity: 0.85;
+    background-color: rgba(26, 58, 92, 0.82);
     letter-spacing: 2px;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .hero article {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    width: 55%;
+    width: 52%;
     background-color: var(--dark-overlay);
     color: #ffffff;
     border-radius: 6px;
-    padding: 14px 16px;
+    padding: 16px 18px;
     margin: 0;
 }
 
 .hero article img {
     float: right;
-    width: 125px;
+    width: 120px;
     height: auto;
-    margin: 0 0 8px 12px;
+    margin: 0 0 8px 14px;
     border: 3px solid var(--accent2-color);
     border-radius: 4px;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 .hero article h2 {
+    /* visually hidden but meaningful for accessibility */
     position: absolute;
     width: 1px;
     height: 1px;
@@ -166,12 +149,10 @@ header nav a:hover {
 .hero article p {
     color: #e8f4fb;
     font-size: 0.9rem;
-    line-height: 1.5;
-    margin: 0;
-    padding: 0;
+    line-height: 1.55;
 }
 
-/* ── Book Now / Join Us buttons ── */
+/* ── Buttons ── */
 .btn {
     display: inline-block;
     padding: 8px 22px;
@@ -184,7 +165,7 @@ header nav a:hover {
     border-radius: 4px;
     border: 1px solid #a0906a;
     transition: background-color 0.2s, color 0.2s;
-    margin-top: 4px;
+    margin-top: 10px;
 }
 
 .btn:hover {
@@ -204,94 +185,93 @@ header nav a:hover {
 }
 
 /* ======================
-   ABOUT INFO SECTION
+   HISTORY SECTION
    ====================== */
-.about-info {
-    padding: 24px 20px;
-    margin: 0;
-    border: none;
+.history-section {
+    padding: 40px 30px;
     background-color: #ffffff;
 }
 
-.about-info h2 {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #1a1a1a;
-    margin: 16px 0 8px;
-    padding: 0;
-    font-family: var(--body-font);
-    /* matches the plain bold style in the reference */
+.history-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-align: center;
 }
 
-.about-info img {
-    float: left;
-    width: 115px;
-    height: auto;
-    margin: 4px 16px 12px 0;
-    border: 2px solid #cccccc;
+/* 3-column: text | image | text */
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 28px;
+    align-items: center;
+}
+
+.history-content img {
+    width: 220px;
+    height: 180px;
+    object-fit: cover;
     border-radius: 4px;
+    border: 3px solid var(--card-border);
 }
 
-.about-info p {
-    margin: 0 0 14px;
-    padding: 0;
-    font-size: 0.88rem;
-    line-height: 1.6;
-    color: #333333;
-}
-
-/* clear float after the about-info block */
-.about-info::after {
-    content: '';
-    display: table;
-    clear: both;
+.history-content p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: #333;
+    margin: 0;
 }
 
 /* ======================
-   3-CARD ACTIVITIES GRID
+   ADVENTURE AWAITS SECTION
    ====================== */
-.activities {
-    display: flex;
-    justify-content: space-between;
-    gap: 24px;
-    padding: 40px 20px;
-    margin: 0;
-    background-color: #ffffff;
-    border: none;
+.adventures-section {
+    padding: 40px 30px;
+    background-color: var(--primary-color);
 }
 
-.card {
+.adventures-section h2 {
+    color: #f5e6a3;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.adventures-grid {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.adventures-grid figure {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
-}
-
-.card img {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    border: 3px solid var(--card-border);
-    border-radius: 4px;
-}
-
-.card-icon {
-    margin-top: 4px;
-}
-
-.card-label {
-    font-family: var(--heading-font);
-    font-size: 1rem;
-    color: #3a3a3a;
-    text-align: center;
-    letter-spacing: 1px;
     margin: 0;
-    padding: 0;
+}
+
+.adventures-grid figure img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 3px solid var(--accent2-color);
+    display: block;
+}
+
+.adventures-grid figcaption {
+    font-family: var(--heading-font);
+    font-size: 0.78rem;
+    color: #d0e8f5;
+    text-align: center;
+    margin-top: 8px;
+    font-style: italic;
+    letter-spacing: 0.5px;
 }
 
 /* ======================
-   "MORE THAN JUST THE THRILL" SECTION
+   "MORE THAN JUST THE THRILL"
    ====================== */
 .thrill {
     background-color: var(--tan-bg);
@@ -299,8 +279,6 @@ header nav a:hover {
     align-items: center;
     gap: 0;
     padding: 40px 30px;
-    margin: 0;
-    border: none;
 }
 
 .thrill img {
@@ -317,7 +295,6 @@ header nav a:hover {
     color: #f0e8d8;
     padding: 30px 28px;
     margin: 0 0 0 -30px;
-    /* slight overlap onto the photo */
     border-radius: 4px;
     z-index: 1;
 }
@@ -330,10 +307,9 @@ header nav a:hover {
 
 .thrill article p {
     color: #e0d4c0;
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     line-height: 1.65;
-    margin: 0 0 16px;
-    padding: 0;
+    margin-bottom: 16px;
 }
 
 /* ======================
@@ -345,26 +321,16 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 24px;
+    padding: 16px 30px;
     width: 100%;
-    max-width: 100%;
-    margin-top: 0;
 }
 
-.footer-left {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.footer-left p {
+footer p {
     color: #aaaaaa;
     font-size: 0.78rem;
-    margin: 0;
-    padding: 0;
 }
 
-/* ── Social icons ── */
+/* ── Social icons (Flex, right-aligned) ── */
 .socialmedia {
     display: flex;
     align-items: center;
