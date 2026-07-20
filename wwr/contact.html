@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="Contact White Water Rafting Co. — reach out for reservations, general inquiries, or questions about our whitewater rafting trips and adventures.">
+    <meta name="author" content="Ayah Kodjo Ayitey">
+    <title>Contact Us | White Water Rafting Co.</title>
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <img src="images/logo.svg" alt="White Water Rafting Co. Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN ===== -->
+    <main>
+
+        <!-- ── COMPANY INFO (centered) ── -->
+        <section class="company-info">
+            <h1>White Water Rafting Company</h1>
+            <address>
+                <p>123 Main River Street</p>
+                <p>Kolob, California</p>
+                <p><a href="tel:+19999999999">+1 999 999 9999</a></p>
+                <p><a href="mailto:info@whitewater.com">info@whitewater.com</a></p>
+            </address>
+        </section>
+
+        <!-- ── MAP + FORM (side by side) ── -->
+        <div class="map-form">
+
+            <!-- Google Map -->
+            <div class="map-container">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019!2d-117.873!3d37.361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDIxJzQwLjAiTiAxMTfCsDUyJzIyLjgiVw!5e0!3m2!1sen!2sus!4v1234567890"
+                  width="600" height="450" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="White Water Rafting Co. Location Map">
+                </iframe>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="contact-form" action="#" method="get">
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Placeholder" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Placeholder" required>
+                </div>
+
+                <div class="form-group">
+                    <span class="radio-label">Message Purpose</span>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="purpose" value="general" required>
+                            General Inquiry
+                        </label>
+                        <label>
+                            <input type="radio" name="purpose" value="reservation">
+                            Reservation Question
+                        </label>
+                        <label>
+                            <input type="radio" name="purpose" value="suggestion">
+                            Website Suggestion
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5"
+                      placeholder="Type here"></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" name="newsletter" value="yes">
+                        Please Subscribe me to the monthly newsletter
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-submit">Get in Touch!</button>
+
+            </form>
+
+        </div><!-- end .map-form -->
+
+        <!-- ── EMPLOYEE PROFILES ── -->
+        <section class="employees">
+            <h2>We Are Here to Serve You</h2>
+            <div class="employee-grid">
+                <figure>
+                    <img src="images/employee1.jpg" alt="Marcus Rivera, Head River Guide">
+                    <figcaption>Marcus Rivera<br><span>Head River Guide</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee2.jpg" alt="Priya Singh, Operations Manager">
+                    <figcaption>Priya Singh<br><span>Operations Manager</span></figcaption>
+                </figure>
+                <figure>
+                    <img src="images/employee3.jpg" alt="James Okafor, Safety Instructor">
+                    <figcaption>James Okafor<br><span>Safety Instructor</span></figcaption>
+                </figure>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>&copy; 2026 &mdash; White Water Rafting Co. &mdash; Ayah Kodjo Ayitey</p>
+        <nav class="socialmedia">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="images/facebook.svg" alt="Facebook" width="30" height="30">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="images/instagram.svg" alt="Instagram" width="30" height="30">
+            </a>
+            <a href="https://www.youtube.com" target="_blank">
+                <img src="images/youtube.svg" alt="YouTube" width="30" height="30">
+            </a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
